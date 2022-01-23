@@ -17,7 +17,7 @@ const SignIn = ({loadUser, onRouteChange}) => {
       return alert("Field must not be empty.");
     }
     try {
-      let response = await fetch('http://localhost:8081/api/v1/signIn', {
+      let response = await fetch('https://facediv-api.herokuapp.com//api/v1/signIn', {
         method: 'POST',
         headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
         body: JSON.stringify({email, password})
