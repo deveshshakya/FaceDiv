@@ -62,7 +62,7 @@ class App extends Component {
       alert("Link field can't be empty.");
     } else {
       try {
-        let boxesResponse = await fetch('https://facediv-api.herokuapp.com//api/v1/imageURL', {
+        let boxesResponse = await fetch('https://facediv-api.herokuapp.com/api/v1/imageURL', {
           method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({imgURL})
         })
         if (boxesResponse.status === 500) {
@@ -70,7 +70,7 @@ class App extends Component {
         } else {
           boxesResponse = await boxesResponse.json()
 
-          let entriesResponse = await fetch('https://facediv-api.herokuapp.com//api/v1/increaseEntries', {
+          let entriesResponse = await fetch('https://facediv-api.herokuapp.com/api/v1/increaseEntries', {
             method: 'PUT', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({id})
           })
 

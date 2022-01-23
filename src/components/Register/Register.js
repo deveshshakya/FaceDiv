@@ -22,7 +22,7 @@ const Register = ({loadUser, onRouteChange}) => {
       alert("Field must not be empty.");
     } else {
       try {
-        let response = await fetch('https://facediv-api.herokuapp.com//api/v1/register', {
+        let response = await fetch('https://facediv-api.herokuapp.com/api/v1/register', {
           method: 'post', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({
             name, email, password
           })
