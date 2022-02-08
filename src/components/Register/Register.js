@@ -29,7 +29,7 @@ const Register = ({loadUser, onRouteChange}) => {
         })
 
         if (response.status === 201) {
-          response = response.json()
+          response = await response.json()
           if (response._id) {
             loadUser(response)
             onRouteChange('home')
