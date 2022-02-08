@@ -28,7 +28,7 @@ const Register = ({loadUser, onRouteChange}) => {
           })
         })
 
-        if (response.status === 200) {
+        if (response.status === 201) {
           response = response.json()
           if (response._id) {
             loadUser(response)
